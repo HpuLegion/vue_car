@@ -1,0 +1,9 @@
+
+//定义的sass方法，$type---属性，$value---属性值
+@mixin webkit($type,$value){
+    -webkit-#{$type}:$value;
+    -moz-#{$type}:$value;
+    -ms-#{$type}:$value;
+    -o-#{$type}:$value;
+    #{$type}:$value;
+}

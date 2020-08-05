@@ -9,18 +9,21 @@
     </div>
     <!-- 地图组件 -->
     <Map />
+    <!-- 底部导航 -->
+    <NavBar />
   </div>
 </template>
 
 <script>
 import Map from "@/views/aMap/aMap.vue"
 import Car from "@/views/car/index.vue"
+import NavBar from "@c/navBar/index.vue"
 export default {
   name: 'Index',
-  components:{Map,Car},
+  components:{Map,Car,NavBar},
   data () {
     return {
-      // show:false,
+      // show:false,  //通过watch处理
     }
   },
   methods: {
@@ -53,7 +56,7 @@ export default {
       position: fixed;
       right: -600px;
       top: 0;
-      z-index: 101;//要比汽车信息层级高
+      z-index: 100;//要比汽车信息层级高
       width: 25%;
       height: 100vh;
       color: #fff;
