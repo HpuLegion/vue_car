@@ -95,7 +95,9 @@
    */
   
   a {
-    background-color: transparent;
+    background-color: transparent; 
+    text-decoration:none; //去掉默认下滑线
+    color:#333; //设置默认颜色
   }
   
   /**
