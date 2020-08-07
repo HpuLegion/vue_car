@@ -1,6 +1,6 @@
 <template>
   <div id='car-wrap'>
-      <span @click="getIntoUser">汽车信息</span>
+      <!-- <span >汽车信息</span> -->
       <swiper class="swiper" :options="swiperOption" >
           <swiper-slide><SwiperInfo height="500" /></swiper-slide>
           <swiper-slide><SwiperInfo /></swiper-slide>
@@ -48,9 +48,9 @@ export default {
     SwiperInfo
   },
   methods: {
-      getIntoUser(){
-          this.$router.push({name:"User"})
-      }
+      // getIntoUser(){
+      //     this.$router.push({name:"User"})
+      // }
   }
 }
 </script>

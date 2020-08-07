@@ -5,7 +5,7 @@
           <li class="icon"><i class="el-icon-search"></i></li>
           <li class="choseCar"><span>选择车辆</span></li>
           <li class="icon"><i class="el-icon-aim"></i></li>
-          <li class="icon"><i class="el-icon-user"></i></li>
+          <li class="icon"><i class="el-icon-user" @click="getIntoUser"></i></li>
       </ul>
   </div>
 </template>
@@ -17,7 +17,12 @@ export default {
     return {
     }
   },
-  methods: {}
+  methods: {
+      getIntoUser(){
+          this.$router.push({name:"User"})
+      }
+    },
+  
 }
 </script>
 
