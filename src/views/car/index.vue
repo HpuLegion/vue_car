@@ -1,14 +1,16 @@
 <template>
   <div id='car-wrap'>
       <span @click="getIntoUser">汽车信息</span>
-      <swiper class="swiper" :options="swiperOption">
+      <swiper class="swiper" :options="swiperOption" >
+          <swiper-slide><SwiperInfo height="500" /></swiper-slide>
+          <swiper-slide><SwiperInfo /></swiper-slide>
+          <swiper-slide><SwiperInfo /></swiper-slide>
           <swiper-slide><SwiperInfo /></swiper-slide>
           <swiper-slide><SwiperInfo /></swiper-slide>
 
-          <div class="swiper-button-prev" slot="button-prev"></div>
-          <div class="swiper-button-next" slot="button-next"></div>
       </swiper>
-
+      <div class="swiper-button-prev" slot="button-prev"></div>
+      <div class="swiper-button-next" slot="button-next"></div>
   </div>
 </template>
 
@@ -16,11 +18,10 @@
 import SwiperInfo from "@/components/swiper/swiperInfo.vue"
 // 引入swiper
 import { Swiper, SwiperSlide} from 'vue-awesome-swiper'
-// import 'swiper/css/swiper.css'    //版本问题报错
+// import 'swiper/css/swiper.css' 
+//版本问题报错   
 //引用6.0+以上版本写法
 import 'swiper/swiper-bundle.css'
-
-
 
 export default {
   name: 'Cars',
@@ -29,10 +30,14 @@ export default {
 
       swiperOption: {
           slidesPerView: 2,
-          spaceBetween: 20,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true
+          spaceBetween: 30,
+          // pagination: {
+          //   el: '.swiper-pagination',
+          //   type: 'fraction'
+          // },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
           }
       },
     }
@@ -63,5 +68,8 @@ export default {
     // 滑块箭头调整
     .swiper-button-prev, .swiper-button-next{
       transform: translateY(-50%);
+    }
+    .swiper-container{
+      overflow: visible;
     }
 </style>
