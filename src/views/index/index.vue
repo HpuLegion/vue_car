@@ -19,6 +19,7 @@
 import Map from '@/views/aMap/aMap.vue'
 import Car from '@/views/car/index.vue'
 import NavBar from '@c/navBar/index.vue'
+import {popupWindow} from '@/utils/popupWindow.js'
 export default {
   name: 'Index',
   components: { Map, Car, NavBar },
@@ -48,15 +49,24 @@ export default {
     }
   },
   mounted() {
-    document.addEventListener('mouseup', e => {
-      // console.log(e);
-      const userContent = document.querySelector('.children_view')
-      // console.log(userContent);
-      if (userContent) {
-        if (!userContent.contains(e.target)) {
-          this.$router.push({ name: 'Index' })
-        }
-      }
+    // 会员区域的显示与隐藏
+    // document.addEventListener('mouseup', e => {
+    //   // console.log(e);
+    //   const userContent = document.querySelector('.children_view')
+    //   // console.log(userContent);
+    //   if (userContent) {
+    //     if (!userContent.contains(e.target)) {
+    //       this.$router.push({ name: 'Index' })
+    //     }
+    //   }
+    // })
+
+    //封装上面的方法
+    let that=this //解决调用方法时的this指向问题
+    popupWindow({
+      point:that,
+      elementObj:'.children_view',
+      routerName:'Index'
     })
   }
 }
