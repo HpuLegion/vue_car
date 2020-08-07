@@ -1,8 +1,8 @@
  
 // 区域的隐藏
 export function popupWindow(params){
-    console.log(params.point);
-    console.log(this);//undefined
+    // console.log(params.point);
+    // console.log(this);//undefined
     document.addEventListener('mouseup', e => {
         // console.log(e);
         const Content = document.querySelector(params.elementObj)
