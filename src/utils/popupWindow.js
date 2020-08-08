@@ -10,6 +10,7 @@ export function popupWindow(params){
         if (Content) {
           if (!Content.contains(e.target)) {
             params.point.$router.push({ name: params.routerName })
+            // this.$router.push({ name: params.routerName })
           }
         }
       })

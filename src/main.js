@@ -7,6 +7,9 @@ import 'element-ui/lib/theme-chalk/index.css';
 
 import './plugin/aMap.js'  //引入高德地图
 
+// 全局组件
+import "@c/headerBack/index.js"
+
 Vue.use(ElementUI);
 
 Vue.config.productionTip = false;

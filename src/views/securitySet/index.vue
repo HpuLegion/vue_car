@@ -1,6 +1,6 @@
 <template>
-  <div id=''>
-      安全设置
+  <div id='safeSet'>
+    <HeaderBack title="安全设置"/>
   </div>
 </template>
 

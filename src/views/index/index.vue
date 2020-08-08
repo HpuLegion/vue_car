@@ -6,7 +6,9 @@
     <!-- <div class="children_view" v-show="show"> -->
     <div class="children_view"
          :class="{open:showUser}">
-      <router-view />
+
+         <!-- 来加载路由Index下的子级路由 -->
+      <router-view /> 
     </div>
     <!-- 地图组件 -->
     <Map />
