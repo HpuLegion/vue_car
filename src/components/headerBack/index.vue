@@ -12,6 +12,10 @@ export default {
     title: {
       type: String,
       default: ''
+    },
+    goPath:{
+      // type: String,
+      default: -1
     }
   },
   data() {
@@ -19,7 +23,7 @@ export default {
   },
   methods: {
       goback(){
-          this.$router.go(-1)
+          this.$router.go(this.goPath)
       }
   }
 }

@@ -48,6 +48,14 @@ const routes = [
         },
         component:()=>import("@/views/securitySet/index.vue"),
       },
+      {          
+        path:"/passModify",
+        name:"PassModify",
+        meta:{
+          name:"修改密码"
+        },
+        component:()=>import("@/views/passModify/index.vue"),
+      },
       {
         path:"/help",
         name:"Help",
@@ -58,8 +66,6 @@ const routes = [
       },
     ]
   },
-
-
 ];
 
 // 解决路由重复的报错问题，不影响项目运行
